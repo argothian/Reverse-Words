@@ -28,4 +28,4 @@ Implement multithreading, divide the process into two threads. Producer read and
 
 
 Result:
-Using the producer consumer pattern decrease the processing time by at least a quarter. The reason might be when the thread is reading from the file, the thread is idle. By using multithreading the program is still running by poping the stack and write to a file. 
+Using the producer consumer pattern doesn't decrease the time. Maybe by creating a process thread in between the reader and writer would decrease the time, if the process takes a lot of works.
