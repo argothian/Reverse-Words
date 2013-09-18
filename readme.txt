@@ -1,4 +1,3 @@
-9/16/2013
 Coding practice from google code jam.
 
 Link to the problem description:
@@ -26,6 +25,10 @@ The program first read the file and creates an array of stack string. After read
 Producer Consumer Pattern:
 Implement multithreading, divide the process into two threads. Producer read and push the word onto a stack, the consumer pop the stack and write to a file. The stack is put into a queue that is share by the two threads.
 
+NewProducer Consumer Pattern:
+Divide read and process thread into read thread and process thread. Two blocking queue are used one between read and process and one between process and write.
 
 Result:
-Using the producer consumer pattern doesn't decrease the time. Maybe by creating a process thread in between the reader and writer would decrease the time, if the process takes a lot of works.
+Using the producer consumer pattern decrease the execution time. Creating a process thread in between the reader and writer would decrease the time even more. Should see a significant difference on program that has a lot of code to process.
+
+If create one process thread for each input data the execution time might be limited to as low as read and write time. Might have all process threads share an array of result, so the result data is still in order. Might even implement priority between the process thread so the test cases that needed to be printed first gets to run first.

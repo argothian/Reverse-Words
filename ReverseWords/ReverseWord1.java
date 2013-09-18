@@ -63,10 +63,13 @@ public class ReverseWord1 {
 
 		long startTime = System.currentTimeMillis();
 
-		ReverseWord1 sinput = new ReverseWord1(args[0]);
-		sinput.readFile();
-		sinput.writeFile();
-		
+		for (int i = 0; i < 1000; i++) {
+
+			ReverseWord1 sinput = new ReverseWord1(args[0]);
+			sinput.readFile();
+			sinput.writeFile();
+		}
+
 		long endTime = System.currentTimeMillis();
 		long duration = endTime - startTime;
 		System.out.println(duration);
